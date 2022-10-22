@@ -1,0 +1,37 @@
+一覧です
+
+<div class="posts-container">
+  <% @posts.each do |t| %>
+    <div class="post">
+    <p>名前
+      <%= link_to t.user.name, user_path(t.user.id) %> 
+    </p>
+    <p>勉強内容
+      <%= t.body %>
+    </p>
+    <p>一言メモ
+      <%= t.memo %>
+    </p>
+    <p>勉強時間
+      <%= t.watch %> (h)
+    </p>
+    <p>勉強をやった日
+      <%= t.calendar %> (h)
+    </p>
+    </div>
+    <%= link_to "編集する", edit_post_path(t.id) %>
+    <%= button_to "削除する", post_path(t.id), method: :delete %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

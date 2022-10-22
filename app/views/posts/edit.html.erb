@@ -1,0 +1,37 @@
+
+
+    <%= form_for @post do |f| %>
+        <div class="field">
+            <%= f.label :勉強した内容 %>
+            <%= f.select :body, 
+    [ 
+     ["英語(TOEIC、TOEFLなど)","英語(TOEIC、TOEFLなど)"], 
+     ["IT(プログラミング、ITパスポートなど)", "IT(プログラミング、ITパスポートなど)" ], 
+     ["大学の勉強(課題、レポートなど)","大学の勉強(課題、レポートなど)"],
+     ["就活","就活"],
+     ["宅建","宅建"],
+     ["秘書検定","秘書検定"], 
+     ["乙検定","乙検定"], 
+     ["公認会計士","公認会計士"],
+     ["司法試験","司法試験"],
+     ["社会福祉士、介護福祉士","社会福祉士、介護福祉士"],
+     ["その他","その他"]
+    ], 
+    prompt: "勉強内容を選択してください" %>
+    
+    
+        </div>
+        <div class="field">
+            <%= f.label :一言メモ %>
+            <%= f.text_field :memo, :size => 140 %>
+        </div>
+        <div class="field">
+            <%= f.label :勉強時間（ｈ） %>
+            <%= f.text_field :watch, :size => 140 %>
+        </div>
+        <div class="field">
+        <%= f.label :勉強をやった日 %>
+        <%= f.date_select :calendar, :size => 140 %>
+        </div>
+        <%= f.submit "新規投稿する" %>
+    <% end %>

@@ -1,0 +1,31 @@
+ランキング
+
+<style>
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+
+  td {
+    text-align: center;
+  }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>順位</th>
+      <th>名前</th>
+      <th>勉強時間</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each_with_index do |post, i| %>
+      <tr>
+        <td><%= i + 1 %></td>
+        <td><%=post.first %></td>
+        <td><%=post.second %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
