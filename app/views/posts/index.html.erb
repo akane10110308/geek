@@ -1,26 +1,30 @@
-一覧です
 
+<%= stylesheet_link_tag 'index', :media => "all" %>
+<P class="ranking">~POST RIST~</ｐ>
 <div class="posts-container">
   <% @posts.each do |t| %>
     <div class="post">
-    <p>名前
+    <p class="namae">名前:
       <%= link_to t.user.name, user_path(t.user.id) %> 
     </p>
-    <p>勉強内容
+    <p>勉強内容:
       <%= t.body %>
     </p>
-    <p>一言メモ
+    <p>一言メモ:
       <%= t.memo %>
     </p>
-    <p>勉強時間
+    <p>勉強時間:
       <%= t.watch %> (h)
     </p>
-    <p>勉強をやった日
+    <p>勉強をやった日:
       <%= t.calendar %> (h)
     </p>
     </div>
-    <%= link_to "編集する", edit_post_path(t.id) %>
-    <%= button_to "削除する", post_path(t.id), method: :delete %>
+    <% if user_signed_in? && current_user.id == t.user_id %>
+    <%= link_to "編集", edit_post_path(t.id) %>
+    <%= link_to "削除する", post_path(t.id), method: :delete %>
+  <% end %> 
+   </div>
   <% end %>
 </div>
 

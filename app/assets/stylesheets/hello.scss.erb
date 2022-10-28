@@ -1,0 +1,103 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+img {
+width: 600px;
+opacity: 1;}
+.box
+{
+    position: relative;
+}
+
+
+
+/*----------------------------
+scroll_left ｜左から出現
+----------------------------*/
+.scroll_left {
+    -webkit-transition: 1.5s ease-in-out;
+    -moz-transition: 1.5s ease-in-out;
+    -o-transition: 1.5s ease-in-out;
+    transition: 2.5s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    display: flex;
+    height: 400px;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-bottom: 150px;
+  
+}
+.scroll_left.on {
+    opacity: 0.7;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1.0;
+    transform: translateX(0);
+}
+
+/*----------------------------
+scroll_right ｜右から出現
+----------------------------*/
+.scroll_right {
+    -webkit-transition: 2.5s ease-in-out;
+    -moz-transition: 2.5s ease-in-out;
+    -o-transition: 2.5s ease-in-out;
+    transition: 2.5s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    display: flex;
+    height: 400px;
+    margin-left:100px;
+    margin-bottom:150px;
+
+}
+.scroll_right.on {
+    opacity: 0.7;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1.0;
+    transform: translateX(0);
+}
+
+
+/*------- base -------*/
+
+
+
+.sample1 {
+  font-size:25px;
+  margin:20px;
+  align-self: center;
+  font-family: "ＭＳ Ｐ明朝";
+  
+}
+
+sample2 {
+  font-size:25px;
+  margin:20px;
+  align-self: center;
+  font-family: "ＭＳ Ｐ明朝";
+  position: absolute;
+  width: 100%;
+  left: 0; 
+  top: calc(50% - 25px); 
+  text-align: right; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 40px;
+  line-height: 50px;
+}
+ 
+
+
+.sample3{
+  font-size:45px;
+  text-align:center;
+  margin-bottom:100px;
+  font-family: "Arial Black";
+  font-color: white;
+}
+

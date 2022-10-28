@@ -21,14 +21,20 @@
   body {
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
       Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+      background-color: #9b9797;
+      
+     
+
   }
   header {
-    background-color: #00acee;
+    background-color: #3a3a3a;
+    font-family:"ＭＳ Ｐゴシック";
     height: 80px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
   }
   header a {
     color: white; 
